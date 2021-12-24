@@ -1,0 +1,17 @@
+<h1>hello there</h1>
+
+
+{% for p in projects %}
+
+<h1>{{ p.title }}</h1>
+<p>{{ p.description }}</p>
+<img src="{{ p.image.url }}" height=100 width=100>
+
+{% if p.url %}
+
+<br>
+<a href="{{ p.url }}">Link</a>
+
+{% endif %}
+
+{% endfor %}
